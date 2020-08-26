@@ -26,9 +26,9 @@ describe Bookmarks do
     it 'adds a bookmark to database' do
       bookmark = Bookmarks.create( url:'www.monzo.com', title: 'Monzo')
       persisted_data = persisted_data(id: bookmark.id)
-      
+     
       expect(bookmark).to be_a Bookmarks
-   # expect(bookmark.id).to eq persisted_data.first['id']
+     expect(bookmark.id).to eq persisted_data['id']
     expect(bookmark.title).to eq 'Monzo'
     expect(bookmark.url).to eq 'www.monzo.com'
     end
