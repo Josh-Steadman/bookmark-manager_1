@@ -1,6 +1,10 @@
 <ul>
   <% @bookmarks.each do |bookmark| %>
-    <li><%= bookmark %></li>
+    <li>
+      <a href="<%= bookmark.url %>">
+        <%= bookmark.title %>
+      </a>
+    </li>
   <% end %>
 </ul>
 
@@ -8,6 +12,10 @@
   <label for="url">
     URL:
     <input type="text" name="url">
+  </label>
+  <label for="title">
+    Title:
+    <input type="text" name="title">
   </label>
   <input type="submit" id="Add" value="Add to Bookmarks">
 </form>

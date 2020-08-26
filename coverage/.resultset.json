@@ -4,30 +4,53 @@
       "/Users/joshsteadman/Projects/Makers_projects/week_4/bookmark-manager/spec/bookmarks_spec.rb": {
         "lines": [
           1,
-          null,
-          1,
-          null,
-          1,
           1,
           null,
           1,
           null,
           1,
           1,
+          null,
+          1,
+          null,
           1,
           1,
           1,
-          0,
-          0,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null,
           1,
           1,
           1,
-          0,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
           null,
           null,
+          null,
+          null
+        ]
+      },
+      "/Users/joshsteadman/Projects/Makers_projects/week_4/bookmark-manager/spec/database_helpers.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
           null,
           null
         ]
@@ -39,7 +62,8 @@
           1,
           1,
           1,
-          0,
+          1,
+          1,
           null,
           null
         ]
@@ -60,13 +84,13 @@
           null,
           1,
           1,
-          0,
-          0,
+          1,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1598374258
+    "timestamp": 1598445573
   }
 }
