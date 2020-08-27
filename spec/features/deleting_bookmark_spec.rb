@@ -1,11 +1,12 @@
 feature 'Deleting bookmarks' do
     scenario 'select a bookmark to delete' do
-        visit '/bookmarks'
-        fill_in :url, with: 'http://www.monzo.com'
-        fill_in :title, with: 'Monzo'
-        click_button 'Add'
-        fill_in :delete_title, with: 'Monzo' 
-        click_button 'Delete'
-        expect(page).to_not have_content 'Monzo'
+        Bookmarks.create(url: 'http://www.monzo.com', title: 'Monzo')
+        visit('/bookmarks')
+        expect(page).to have_link('Monzo', href: 'http://www.monzo.com')
+        first('.bookmark').click_button 'Delete'
+
+        expect(current_path).to eq '/bookmarks'
+        expect(page).not_to have_link('Monzo', href: 'http://www.monzo.com')
+        
     end
 end 

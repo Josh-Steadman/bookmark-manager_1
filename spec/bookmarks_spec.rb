@@ -13,7 +13,7 @@ describe Bookmarks do
       Bookmarks.create(url: "http://www.google.com", title: "Google")
      
       bookmarks = Bookmarks.all
-      p bookmarks
+      
      
       expect(bookmarks.length).to eq 3
       expect(bookmarks.first).to be_a Bookmarks
@@ -34,5 +34,15 @@ describe Bookmarks do
     expect(bookmark.url).to eq 'www.monzo.com'
     end
   end
+
+  describe '#.delete' do 
+    it 'deletes a bookmark from the database' do
+      bookmark = Bookmarks.create( url:'www.monzo.com', title: 'Monzo')
+
+      Bookmarks.delete(id: bookmark.id)
+      expect(Bookmarks.all.length).to eq 0
+    end
+  end
+
 
 end
