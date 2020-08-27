@@ -1,6 +1,6 @@
 require 'sinatra/base'
-require './lib/bookmarks'
-require 'pg'
+require_relative './lib/bookmarks'
+require_relative './database_setup.rb'
 
 class BookmarkManager < Sinatra::Base
   enable :sessions, :method_override
