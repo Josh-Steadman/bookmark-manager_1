@@ -25,19 +25,21 @@ describe Bookmarks do
 
   describe '#.create' do
     it 'adds a bookmark to database' do
-      bookmark = Bookmarks.create( url:'www.monzo.com', title: 'Monzo')
+
+      bookmark = Bookmarks.create( url:'www.test.com', title: 'Test')
       persisted_data = persisted_data(id: bookmark.id)
      
       expect(bookmark).to be_a Bookmarks
      expect(bookmark.id).to eq persisted_data['id']
-    expect(bookmark.title).to eq 'Monzo'
-    expect(bookmark.url).to eq 'www.monzo.com'
+    expect(bookmark.title).to eq 'Test'
+    expect(bookmark.url).to eq 'www.test.com'
+
     end
   end
 
   describe '#.delete' do 
     it 'deletes a bookmark from the database' do
-      bookmark = Bookmarks.create( url:'www.monzo.com', title: 'Monzo')
+      bookmark = Bookmarks.create( url:'www.test.com', title: 'Test')
 
       Bookmarks.delete(id: bookmark.id)
       expect(Bookmarks.all.length).to eq 0
