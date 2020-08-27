@@ -54,4 +54,13 @@ describe Bookmarks do
       expect(book.url).to eq 'www.test.com'
     end
   end
+
+  describe '#find' do 
+    it 'finds the bookmark to be updated' do
+      bookmark = Bookmarks.create( url:'www.tast.com', title: 'Test')
+
+      book = Bookmarks.find( id: bookmark.id )
+      expect(book.id).to eq bookmark.id
+    end
+  end
 end

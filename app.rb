@@ -27,7 +27,8 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/bookmarks/:id/update' do
-    @id = params[:id]
+    @bookmark = Bookmarks.find( id: params[:id])
+
     erb :bookmarks_update
    
   end
