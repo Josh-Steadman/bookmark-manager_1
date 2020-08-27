@@ -14,9 +14,11 @@ describe DatabaseConnection do
 
   describe '.query' do
     it 'executes the SQL query' do
-      sql_string = "INSERT INTO bookmarks (url, title) VALUES ('www.google.com', 'Google');"
-      query = connection.query(sql_string)
-      expect(query.first.title).to eq "Google"
+     
+      expect(connection).to receive(:exec).with("SELECT * FROM bookmarks;")
+    
+      DatabaseConnection.query("SELECT * FROM bookmarks;")
+     
     end
   end
   

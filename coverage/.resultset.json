@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/james/ruby/makers/4_weekfour/bookmark-manager_1/spec/bookmarks_spec.rb": {
+      "/Users/joshsteadman/Projects/Makers_projects/week_4/bookmark-manager/spec/bookmarks_spec.rb": {
         "lines": [
           1,
           1,
@@ -71,7 +71,7 @@
           null
         ]
       },
-      "/Users/james/ruby/makers/4_weekfour/bookmark-manager_1/spec/database_helpers.rb": {
+      "/Users/joshsteadman/Projects/Makers_projects/week_4/bookmark-manager/spec/database_helpers.rb": {
         "lines": [
           1,
           null,
@@ -84,7 +84,7 @@
           null
         ]
       },
-      "/Users/james/ruby/makers/4_weekfour/bookmark-manager_1/spec/database_connection_spec.rb": {
+      "/Users/joshsteadman/Projects/Makers_projects/week_4/bookmark-manager/spec/database_connection_spec.rb": {
         "lines": [
           1,
           null,
@@ -102,29 +102,41 @@
           null,
           1,
           1,
+          null,
+          null,
           1,
+          null,
           1,
-          1,
+          null,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/james/ruby/makers/4_weekfour/bookmark-manager_1/lib/database_connection.rb": {
+      "/Users/joshsteadman/Projects/Makers_projects/week_4/bookmark-manager/lib/database_connection.rb": {
         "lines": [
           1,
           null,
           1,
-          1,
+          null,
           null,
           1,
           2,
           null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
-      "/Users/james/ruby/makers/4_weekfour/bookmark-manager_1/spec/features/adding_new_bookmark_spec.rb": {
+      "/Users/joshsteadman/Projects/Makers_projects/week_4/bookmark-manager/spec/features/adding_new_bookmark_spec.rb": {
         "lines": [
           1,
           1,
@@ -138,7 +150,7 @@
           null
         ]
       },
-      "/Users/james/ruby/makers/4_weekfour/bookmark-manager_1/spec/features/deleting_bookmark_spec.rb": {
+      "/Users/joshsteadman/Projects/Makers_projects/week_4/bookmark-manager/spec/features/deleting_bookmark_spec.rb": {
         "lines": [
           1,
           1,
@@ -154,7 +166,7 @@
           null
         ]
       },
-      "/Users/james/ruby/makers/4_weekfour/bookmark-manager_1/spec/features/updating_bookmarks_spec.rb": {
+      "/Users/joshsteadman/Projects/Makers_projects/week_4/bookmark-manager/spec/features/updating_bookmarks_spec.rb": {
         "lines": [
           null,
           1,
@@ -178,7 +190,7 @@
           null
         ]
       },
-      "/Users/james/ruby/makers/4_weekfour/bookmark-manager_1/spec/features/viewing_bookmarks_spec.rb": {
+      "/Users/joshsteadman/Projects/Makers_projects/week_4/bookmark-manager/spec/features/viewing_bookmarks_spec.rb": {
         "lines": [
           1,
           1,
@@ -201,6 +213,6 @@
         ]
       }
     },
-    "timestamp": 1598545520
+    "timestamp": 1598548138
   }
 }

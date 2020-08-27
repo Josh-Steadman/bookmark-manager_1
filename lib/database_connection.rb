@@ -1,9 +1,18 @@
 require 'pg'
 
 class DatabaseConnection
-  attr_reader :database
+  
 
   def self.setup(db_name)
-    @@database = PG.connect :dbname => db_name
+    @database = PG.connect :dbname => db_name
+    
   end
+
+  def self.query(sql_query)
+   @database.exec(sql_query)
+   
+  end
+  
+  
+
 end
