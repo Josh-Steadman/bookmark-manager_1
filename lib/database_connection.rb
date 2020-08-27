@@ -1,8 +1,9 @@
 require 'pg'
 
 class DatabaseConnection
+  attr_reader :database
 
-  def self.database
-    # PG.connect :dbname => 'bookmark_manager_test'
+  def self.setup(db_name)
+    @@database = PG.connect :dbname => db_name
   end
 end
