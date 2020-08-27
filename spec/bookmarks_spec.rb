@@ -13,6 +13,7 @@ describe Bookmarks do
       Bookmarks.create(url: "http://www.google.com", title: "Google")
      
       bookmarks = Bookmarks.all
+      p bookmarks
      
       expect(bookmarks.length).to eq 3
       expect(bookmarks.first).to be_a Bookmarks
