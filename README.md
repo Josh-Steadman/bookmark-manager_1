@@ -25,3 +25,7 @@ As an internet user,
 So that I can save internet pages I like
 I want to add urls to my list of my bookmarks
 ```
+```
+As an internet user
+so that i can correct my bookmarks
+I want to updated my urls or title of my bookmarks

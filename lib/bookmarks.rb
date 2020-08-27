@@ -42,4 +42,13 @@ class Bookmarks
     con.exec("DELETE FROM bookmarks WHERE id = #{id}")
   end
 
+  def self.update(url:, title:, id:)
+    if ENV['ENVIRONMENT'] == 'test'
+      con = PG.connect :dbname => 'bookmark_manager_test'
+    else
+      con = PG.connect :dbname => 'bookmark_manager'
+    end
+    js = con.exec("UPDATE bookmarks SET url = '#{url}', title = '#{title}' WHERE id = '#{id}' RETURNING id, url, title;")
+    Bookmarks.new(id: js[0]['id'], url: js[0]['url'], title:js[0]['title'])
+  end
 end
