@@ -1,4 +1,5 @@
 require_relative 'database_connection'
+require 'uri'
 
 class Bookmarks
 
@@ -20,9 +21,13 @@ class Bookmarks
   end
 
   def self.create(url:, title:)
+    return false unless is_url?(url)
+    
  
-    bookmarks =  DatabaseConnection.query("INSERT INTO bookmarks (url, title) VALUES ('#{url}', '#{title}') RETURNING id, url, title;")
+    bookmarks = DatabaseConnection.query("INSERT INTO bookmarks (url, title) VALUES ('#{url}', '#{title}') RETURNING id, url, title;")
     Bookmarks.new(id: bookmarks[0]['id'], title: bookmarks[0]['title'], url: bookmarks[0]['url'])
+
+
   end
 
   def self.delete(id:)
@@ -40,5 +45,10 @@ class Bookmarks
    
     js =  DatabaseConnection.query("SELECT * FROM bookmarks WHERE id = #{id}")
     Bookmarks.new(id: js[0]['id'], url: js[0]['url'], title:js[0]['title'])
+  end
+
+  private
+  def self.is_url?(url)
+    url =~ /\A#{URI::regexp(['http', 'https'])}\z/
   end
 end
